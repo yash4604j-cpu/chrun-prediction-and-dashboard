@@ -48,21 +48,14 @@ Developed as part of the **7005SCN Individual Research Project** (**MSc Data Sci
 
 ```
 .
-├── 📄 app.py                     # Main Streamlit Web Application
-├── 📊 dataset.csv                # E-commerce Customer Dataset (36,992 rows)
-├── 📦 churn_pipeline.joblib      # Serialized Machine Learning Pipeline
-├── 📋 requirements.txt           # Python Dependencies
-├── 📂 src/
-│   ├── 🛠️ preprocess.py          # Data Cleaning & Feature Engineering Pipeline
-│   └── 🤖 train.py               # Model Training, 10-Fold CV & SHAP Generation
-├── 📂 models/
-│   └── 📦 churn_pipeline.joblib  # Trained Champion Model Pipeline
-├── 📂 reports/                   # Performance Metrics & Benchmark Plots
-│   ├── 📈 cv_10fold_performance.csv
-│   ├── 📊 roc_curves_comparison.png
-│   ├── 📉 pr_curves_comparison.png
-│   └── 🐝 shap_summary_dot.png
-└── 📖 README.md                  # Project Documentation
+├── 📓 Dessertation_project_codes.ipynb # Machine Learning Research & Model Training Notebook
+├── 📖 README.md                        # Project Documentation
+├── 📄 app.py                           # Interactive Streamlit Web Dashboard
+├── 📦 churn_pipeline.joblib            # Serialized Champion Machine Learning Model
+├── ⚙️ config.toml                       # Streamlit Application Configuration
+├── 📊 dataset.csv                      # E-commerce Customer Dataset (36,992 rows)
+├── 📋 requirements.txt                 # Python Dependencies
+└── 📑 sample_customers.csv             # Sample Customer Records for Batch Processing
 ```
 
 ---
