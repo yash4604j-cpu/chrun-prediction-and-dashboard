@@ -1,5 +1,24 @@
 # 🎯 Customer Churn Prediction & Interactive Retention Dashboard
 
+[![Live Dashboard](https://img.shields.io/badge/Streamlit-Live_Dashboard-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)](https://chrun-prediction-and-dashboard.streamlit.app)
+[![Python](https://img.shields.io/badge/Python-3.10%2B-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
+[![XGBoost](https://img.shields.io/badge/XGBoost-Ensemble-228B22?style=for-the-badge&logo=xgboost&logoColor=white)](https://xgboost.readthedocs.io/)
+[![Scikit-Learn](https://img.shields.io/badge/Scikit--Learn-1.3%2B-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white)](https://scikit-learn.org/)
+[![Coventry University](https://img.shields.io/badge/Coventry_University-7005SCN-00529B?style=for-the-badge)](https://www.coventry.ac.uk/)
+[![Ethics ID](https://img.shields.io/badge/Ethics_ID-P194842-brightgreen?style=for-the-badge)](https://www.coventry.ac.uk/)
+
+> **M.Sc. Data Science Individual Research Project (7005SCN)**  
+> **Author:** Yash Anand Kumar  
+> **Supervisor:** Dr. Mohammed Ahmed (CEES)  
+> **Ethics Project ID:** P194842 (Authorised — Low Risk)
+
+---
+
+## 🌐 Live Web Application
+🔗 **Access the Live Dashboard:** [https://chrun-prediction-and-dashboard.streamlit.app](https://chrun-prediction-and-dashboard.streamlit.app)
+
+---
+
 ## 📌 Project Overview
 This repository contains an end-to-end Machine Learning pipeline and an interactive Streamlit web dashboard designed to predict customer churn and recommend automated, personalized retention actions for subscription-based businesses.
 
@@ -7,15 +26,28 @@ Developed as part of the **7005SCN Individual Research Project** (**MSc Data Sci
 
 ---
 
-## 🎯 Key Features & Workflow
+## 🎯 Key Features & Dashboard Capabilities
 
-- 🧹 **Automated Preprocessing & Feature Engineering:** Cleans recency anomalies (capping `-999` login values), imputes missing fields with mode/median indicators, engineers customer tenure in months, maps feedback sentiment (-2 to +2), and synthesizes active complaint flags.
+- 🧹 **Automated Preprocessing & Feature Engineering:** Cleans recency anomalies (capping `-999` login values using IQR bounds), imputes missing fields with mode/median indicators, engineers customer tenure in months, maps feedback sentiment (-2 to +2), and synthesizes active complaint flags.
+- 🖥️ **Interactive 4-Module Streamlit Dashboard (`app.py`):**
+  - **Module 1 — Churn Risk Engine:** Real-time single & batch customer churn probability scoring with automated risk-tiered retention recommendations (High, Medium, Low).
+  - **Module 2 — Financial ROI Simulator:** Interactive calculator for retention campaign budgets, CLV recovery, and net retention profit.
+  - **Module 3 — Explainable AI (SHAP):** Global feature importance and individual customer prediction explanations using SHAP force & summary plots.
+  - **Module 4 — Empirical Benchmark Visualizer:** Interactive ROC curves, Precision-Recall curves, confusion matrices, and data schema stats.
 - ⚖️ **Imbalance & Cross-Validation Benchmarking:** Evaluates Logistic Regression, Random Forest, and XGBoost using Stratified 10-Fold Cross-Validation across four imbalance mitigation strategies (Baseline, SMOTE Oversampling, Random Under-Sampling, and Cost-Sensitive Weighting).
-- 🖥️ **Interactive Streamlit Dashboard (`app.py`):** 
-  - **Batch & Single Churn Risk Engine:** Real-time customer churn risk scoring and automated risk-tiered retention recommendations.
-  - **Financial ROI Simulator:** Interactive calculator for retention campaign budgets, CLV recovery, and net retention profit.
-  - **Explainable AI (SHAP):** Global feature importance and individual customer prediction explanations.
-  - **Benchmark Visualizer:** Interactive ROC curves, Precision-Recall curves, and confusion matrix displays.
+
+---
+
+## 📊 Empirical Model Performance Summary
+
+| Model | Imbalance Strategy | 10-Fold CV AUC (Mean ± Std) | Holdout AUC-ROC | Holdout Precision | Holdout Recall | Holdout F1-Score |
+| :--- | :--- | :---: | :---: | :---: | :---: | :---: |
+| **XGBoost (Champion)** | **Baseline (No Sampling)** | **0.9779 ± 0.0046** | **0.9753** | **0.9510** | **0.9311** | **0.9409** |
+| XGBoost | SMOTE Oversampling | 0.9783 ± 0.0044 | 0.9753 | 0.9516 | 0.9286 | 0.9399 |
+| XGBoost | Cost-Sensitive Weighting | 0.9778 ± 0.0047 | 0.9753 | 0.9544 | 0.9258 | 0.9399 |
+| Random Forest | Cost-Sensitive Weighting | 0.9785 ± 0.0044 | 0.9758 | 0.9483 | 0.9248 | 0.9364 |
+| Random Forest | Baseline (No Sampling) | 0.9774 ± 0.0053 | 0.9753 | 0.9439 | 0.9291 | 0.9364 |
+| Logistic Regression | Baseline (No Sampling) | 0.9443 ± 0.0055 | 0.9440 | 0.8592 | 0.8688 | 0.8640 |
 
 ---
 
@@ -77,7 +109,7 @@ streamlit run app.py
 
 ---
 
-## 🏆 Key Findings & Results Summary
+## 🏆 Key Findings & Business Impact
 
 - 💡 **Predictive Performance:** The champion XGBoost Classifier achieved a benchmark Holdout AUC-ROC of 0.975 and 95.1% Precision, demonstrating strong generalization.
 - 🔑 **Top Attrition Drivers:** SHAP feature importance analysis identified points in wallet, login recency, membership tier, and unresolved customer complaints as the primary indicators of churn risk.
@@ -93,5 +125,7 @@ streamlit run app.py
 - **Ethics Project ID:** P194842 (Authorised — Low Risk)
 - **License:** Distributed under the MIT License.
 - **Repository Link:** [yash4604j-cpu/chrun-prediction-and-dashboard](https://github.com/yash4604j-cpu/chrun-prediction-and-dashboard)
+- **Live App URL:** [chrun-prediction-and-dashboard.streamlit.app](https://chrun-prediction-and-dashboard.streamlit.app)
+
 
 
