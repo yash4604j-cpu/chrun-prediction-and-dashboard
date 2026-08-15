@@ -1,12 +1,5 @@
 # 🎯 Customer Churn Prediction & Interactive Retention Dashboard
 
-[![Live Dashboard](https://img.shields.io/badge/Streamlit-Live_Dashboard-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)](https://chrun-prediction-and-dashboard.streamlit.app)
-[![Python](https://img.shields.io/badge/Python-3.10%2B-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
-[![XGBoost](https://img.shields.io/badge/XGBoost-Ensemble-228B22?style=for-the-badge&logo=xgboost&logoColor=white)](https://xgboost.readthedocs.io/)
-[![Scikit-Learn](https://img.shields.io/badge/Scikit--Learn-1.3%2B-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white)](https://scikit-learn.org/)
-[![Coventry University](https://img.shields.io/badge/Coventry_University-7005SCN-00529B?style=for-the-badge)](https://www.coventry.ac.uk/)
-[![Ethics ID](https://img.shields.io/badge/Ethics_ID-P194842-brightgreen?style=for-the-badge)](https://www.coventry.ac.uk/)
-
 > **M.Sc. Data Science Individual Research Project (7005SCN)**  
 > **Author:** Yash Anand Kumar  
 > **Supervisor:** Dr. Mohammed Ahmed (CEES)  
@@ -15,7 +8,7 @@
 ---
 
 ## 🌐 Live Web Application
-🔗 **Access the Live Dashboard:** [https://chrun-prediction-and-dashboard.streamlit.app](https://chrun-prediction-and-dashboard.streamlit.app)
+🔗 **Live Dashboard:** https://yash-churn-prediction-dashboard.streamlit.app/
 
 ---
 
@@ -105,7 +98,6 @@ python src/train.py
 ```bash
 streamlit run app.py
 ```
-*The dashboard will automatically open in your default browser at [http://localhost:8501](http://localhost:8501).*
 
 ---
 
@@ -124,8 +116,3 @@ streamlit run app.py
 - **Institution:** Coventry University (College of Engineering, Environment and Science)
 - **Ethics Project ID:** P194842 (Authorised — Low Risk)
 - **License:** Distributed under the MIT License.
-- **Repository Link:** [yash4604j-cpu/chrun-prediction-and-dashboard](https://github.com/yash4604j-cpu/chrun-prediction-and-dashboard)
-- **Live App URL:** [chrun-prediction-and-dashboard.streamlit.app](https://chrun-prediction-and-dashboard.streamlit.app)
-
-
-
