@@ -1,4 +1,3 @@
-temp
 # 🎯 Customer Churn Prediction & Interactive Retention Dashboard
 
 ## 📌 Project Overview
